@@ -18,6 +18,9 @@ int main(){
         std::cin.ignore(10000,'\n');
         std::cout << "Incorrect input. Try again: ";
     }
+
+    std::cout << "Hello world";
+    
     std::cout << "Enter y: ";
     while(!(std::cin >> y) || std::cin.peek() != '\n'){
         std::cin.clear();
