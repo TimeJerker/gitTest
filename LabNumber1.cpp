@@ -3,7 +3,8 @@ int length(int n);
 int result(int a);
 int main(){
     std::cout << "Digital root" << '\n';
-    char chExit;
+    char arrExit[] = {};
+    std::string sExit;
     do{
     int value;
     std::cout << "Input a nonnegative integer>";
@@ -12,13 +13,20 @@ int main(){
         std::cin.ignore(10000, '\n');
         std::cout << "Incorrect input! Try again: " << '\n';
     }   
+    
     while (length(value) != 1){
         value = result(value);
     }
     std::cout << "Result: " << value << '\n';
-    std::cout << "Continue? (Y/N) >";
-    std::cin >> chExit;
-    }while(chExit == 'Y' || chExit == 'y');
+    
+    std::cout << "Repeat the program?: " << std::endl;
+    std::cout << "Yes- enter 'Yes'" << "\n" << "No- enter any key" << std::endl;
+    sExit.clear();
+    std::cin >> arrExit;
+    for (int x = 0; x < strlen(arrExit); x++){
+        sExit.push_back(tolower(arrExit[x]));
+    }   
+    }while(sExit == "yes");
 }
 int length(int n) {
     int l = 0;
