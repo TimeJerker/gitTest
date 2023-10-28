@@ -12,7 +12,7 @@ int main(){
         std::cin.ignore(100000, '\n');
         std::cout << "Wrong input! Try again: ";
     }
-    int *Array = new int(size);
+    int *Array = new int[size];
     for (int i = 0; i < size; i++){
         std::cout << "Input the integer: " << std::endl;
         while(!(std::cin >> temp) || std::cin.peek() != '\n'){
